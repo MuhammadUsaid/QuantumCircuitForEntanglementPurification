@@ -1,1 +1,7 @@
-# QuantumCircuitForEntanglementPurification
+# Entanglement Purification Circuits
+Quantum Circuits are used for Entanglement Purification. The idea is to break the circuit in two parts where half of the circuit is with Bob while the other half is with Alice. They can only communicate classically. The Bell States are provided with given probabilities. The circuit is run different times to get the pure state |A> as many times as possible in it's purified form. There are a lot of possibilities to generate circuits for entanglement purification. But finding one with the best performance can be think of as a discrete combinatorial optimization problem.
+# Double Selection Circuit
+Double Selection Circuit is known as the optimized version for 3 Qubits to be used as entanglement purification protocol. Three entangled pairs are introduced in this and
+one qubit from each pair is given to both, Alice and Bob. They perform two CNOT circuits on respective wires and then coincidence measurements in Z and X Basis are performed. One pair is left unmeasured which is the required pair to be purified. This project has the double selection ciruit implemented in qiskit. The probability of coincidence measurements happening is calculated mathematically and experimentally with qiskit.
+# Genetic Algorithm To Generate Entanglement Purification Circuit
+I have applied genetic algorithm to make a protocol for entanglement purification. The individuals consists of the circuit as their attribute. The algorithm ran for 50 generations. The parents were selected with rank based scheme. The survivors were selected with binary tournament scheme. The algorithm seemed to converge before 50 generations. The fitness values were all close to 0.6.
